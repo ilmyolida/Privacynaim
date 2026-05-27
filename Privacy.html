@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Maxfiylik siyosati | An-Naim ilovasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 10% 20%, #0a2b1e, #071a12);
+            color: #e5e7eb;
+            padding: 24px 16px;
+            min-height: 100vh;
+        }
+
+        .privacy-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(18, 28, 24, 0.8);
+            backdrop-filter: blur(14px);
+            border-radius: 56px;
+            padding: 32px 28px;
+            border: 1px solid rgba(46, 204, 113, 0.3);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f5f5, #2ecc71);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .update-date {
+            text-align: center;
+            color: #8a9b8f;
+            font-size: 0.85rem;
+            margin-bottom: 30px;
+            border-bottom: 1px dashed #2ecc7133;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 8px;
+        }
+
+        /* Tabs */
+        .lang-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .lang-tab {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(46,204,113,0.4);
+            padding: 10px 26px;
+            border-radius: 100px;
+            font-weight: 600;
+            color: #ccd6cf;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 1rem;
+        }
+
+        .lang-tab i {
+            margin-right: 8px;
+        }
+
+        .lang-tab.active {
+            background: #2ecc71;
+            color: #0a1f15;
+            border-color: #2ecc71;
+            box-shadow: 0 6px 14px rgba(46,204,113,0.3);
+        }
+
+        .lang-tab:hover:not(.active) {
+            background: rgba(46,204,113,0.2);
+            border-color: #2ecc71;
+        }
+
+        /* Content */
+        .policy-pane {
+            display: none;
+            animation: fadeSlide 0.3s ease-out;
+        }
+
+        .policy-pane.active {
+            display: block;
+        }
+
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(12px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        .section {
+            background: rgba(0,0,0,0.25);
+            margin-bottom: 24px;
+            border-radius: 32px;
+            padding: 20px 24px;
+            border-left: 5px solid #2ecc71;
+            transition: 0.2s;
+        }
+
+        .section:hover {
+            background: rgba(0,0,0,0.35);
+            transform: translateX(4px);
+        }
+
+        .section h2 {
+            font-size: 1.55rem;
+            margin-bottom: 12px;
+            color: #2ecc71;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section h2 i {
+            font-size: 1.5rem;
+        }
+
+        .section p, .section li {
+            line-height: 1.6;
+            color: #dee4db;
+        }
+
+        .section ul {
+            padding-left: 28px;
+            margin-top: 8px;
+        }
+
+        .section li {
+            margin: 8px 0;
+        }
+
+        .highlight {
+            background: rgba(46,204,113,0.15);
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 500;
+            color: #b2f0bc;
+        }
+
+        footer {
+            margin-top: 45px;
+            text-align: center;
+            font-size: 0.8rem;
+            padding-top: 20px;
+            border-top: 1px solid rgba(46,204,113,0.25);
+            color: #8faa99;
+        }
+
+        @media (max-width: 600px) {
+            .privacy-card {
+                padding: 20px 16px;
+            }
+            .section {
+                padding: 16px;
+            }
+            .section h2 {
+                font-size: 1.3rem;
+            }
+            .lang-tab {
+                padding: 6px 18px;
+                font-size: 0.85rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="privacy-card">
+    <h1><i class="fas fa-shield-alt"></i> An‑Naim · Maxfiylik siyosati</h1>
+    <div class="update-date"><i class="far fa-calendar-alt"></i> 27-may, 2026 | 27 мая 2026 | May 27, 2026</div>
+
+    <div class="lang-tabs">
+        <div class="lang-tab active" data-lang="uz"><i class="fas fa-flag"></i> O‘zbekcha</div>
+        <div class="lang-tab" data-lang="ru"><i class="fas fa-flag"></i> Русский</div>
+        <div class="lang-tab" data-lang="en"><i class="fas fa-flag"></i> English</div>
+    </div>
+
+    <!-- UZBEK VERSION (batafsil) -->
+    <div id="pane-uz" class="policy-pane active">
+        <div class="section"><h2><i class="fas fa-circle-info"></i> 1. Umumiy qoidalar</h2><p><strong>An‑Naim</strong> ilovasi arab tili o‘rganuvchilari uchun yaratilgan <strong>ofﬂayn lug‘at</strong> bo‘lib, unda hech qanday shaxsiy maʼlumot yig‘ilmaydi, qayta ishlanmaydi yoki uchinchi shaxslarga uzatilmaydi. Ilova sizning faoliyatingizni kuzatmaydi, tahlil qilmaydi va reklama ko‘rsatmaydi.</p></div>
+        <div class="section"><h2><i class="fas fa-database"></i> 2. Yig‘iladigan maʼlumotlar</h2><p><span class="highlight">Hech qanday shaxsiy maʼlumot</span> (ism, familiya, elektron pochta, telefon raqami, manzil, IP-manzil, qurilma ID) yig‘ilmaydi. Lug‘at maʼlumotlari va foydalanuvchi tomonidan qo‘shilgan “Sevimlilar” yoki “Tarix” faqat sizning qurilmangizning mahalliy xotirasida saqlanadi. Hech qanday maʼlumot tashqi serverga (Firebase, AWS, Google Cloud va hokazo) yuborilmaydi.</p></div>
+        <div class="section"><h2><i class="fas fa-percent"></i> 3. Ruxsatlar</h2><p>Ilova faqat minimal ruxsatlarni so‘rashi mumkin:</p><ul><li><i class="fas fa-folder-open"></i> <strong>Saqlash (Storage)</strong> – lug‘at bazasini o‘qish va sozlamalarni (masalan, yoqtirilgan so‘zlar) saqlash uchun. Hech qanday fayl yuklanmaydi yoki yuklab olinmaydi.</li></ul><p>Boshqa ruxsatlar (kamera, mikrofon, joylashuv, kontaktlar) <strong>so‘ralmaydi</strong> va ishlatilmaydi.</p></div>
+        <div class="section"><h2><i class="fas fa-plug"></i> 4. Uchinchi tomon xizmatlari</h2><p>Ushbu versiyada <strong>hech qanday</strong> uchinchi tomon xizmatlari (Google Analytics, AdMob, Firebase Analytics, Crashlytics, Facebook SDK va boshqalar) mavjud emas. Shuning uchun sizning maʼlumotlaringiz hech qanday reklama tarmog‘iga yoki tahlil platformasiga oqib ketmaydi.</p></div>
+        <div class="section"><h2><i class="fas fa-lock"></i> 5. Xavfsizlik choralari</h2><p>Barcha maʼlumotlar qurilmangizda mahalliy saqlanganligi uchun ularning xavfsizligi to‘liq qurilmangizning o‘rnatilgan himoya mexanizmlariga (parol, biometrik, shifrlash) bog‘liq. Biz maʼlumotlarni masofadan o‘chirish, o‘zgartirish yoki ko‘rish imkoniyatiga ega emasmiz. Shaxsiy maʼlumotlarni qayta ishlamasligimiz sababli maʼlumotlar oqishi xavfi deyarli nolga teng.</p></div>
+        <div class="section"><h2><i class="fas fa-child"></i> 6. Bolalar maxfiyligi</h2><p>Ilova 16 yoshdan kichik bolalar uchun mo‘ljallanmagan. Biz ongli ravishda bolalardan hech qanday maʼlumot yig‘maymiz. Agar siz ota-ona sifatida farzandingiz ilovadan foydalangan holda maʼlumot yuborganligini aniqlasangiz, darhol biz bilan bog‘laning va biz bunday maʼlumotlarni (agar ular qandaydir tarzda paydo bo‘lgan bo‘lsa) o‘chirib tashlaymiz.</p></div>
+        <div class="section"><h2><i class="fas fa-gavel"></i> 7. Huquqiy asos (GDPR / CCPA)</h2><p>Ilova hech qanday shaxsiy maʼlumot to‘plamagani uchun GDPR (Yevropa Ittifoqi) va CCPA (Kaliforniya) talablari avtomatik ravishda bajarilgan hisoblanadi. Sizning maʼlumotlaringiz yo‘qligi sababli ularni ko‘chirish, o‘chirish yoki tuzatish talabi qo‘llanilmaydi.</p></div>
+        <div class="section"><h2><i class="fas fa-edit"></i> 8. Maxfiylik siyosatiga o‘zgartirishlar</h2><p>Kelajakda ushbu siyosat yangilanishi mumkin. Muhim o‘zgarishlar bo‘lsa, ushbu sahifadagi sana yangilanadi va ilova yangilanishi bilan foydalanuvchilarga yetkaziladi. Joriy versiyadan foydalanish orqali siz ushbu siyosat shartlarini qabul qilasiz.</p></div>
+        <div class="section"><h2><i class="fas fa-envelope"></i> 9. Aloqa</h2><p>Agar sizda ushbu maxfiylik siyosati yoki ilovaning maʼlumotlar bilan ishlashi haqida savollaringiz bo‘lsa, biz bilan bog‘laning:<br><strong><i class="fas fa-at"></i> safemediaosupport@gmail.com</strong><br>Javob berish uchun 7 ish kunigacha vaqt olishimiz mumkin.</p></div>
+    </div>
+
+    <!-- RUSSIAN VERSION (подробно) -->
+    <div id="pane-ru" class="policy-pane">
+        <div class="section"><h2><i class="fas fa-circle-info"></i> 1. Общие положения</h2><p><strong>An‑Naim</strong> — это офлайн‑словарь для изучающих арабский язык. Приложение <strong>не собирает, не хранит и не передаёт</strong> личные данные пользователей. Нет отслеживания, аналитики или рекламы.</p></div>
+        <div class="section"><h2><i class="fas fa-database"></i> 2. Какие данные собираются?</h2><p><span class="highlight">Никакие</span> персональные данные (имя, email, телефон, IP‑адрес, ID устройства) не собираются. Данные словаря, «Избранное» и «История» хранятся только локально на вашем устройстве. Никакая информация не отправляется на внешние серверы.</p></div>
+        <div class="section"><h2><i class="fas fa-percent"></i> 3. Разрешения</h2><p>Приложение может запросить минимальное разрешение:<br><strong>Доступ к хранилищу</strong> – для чтения словарной базы и сохранения настроек. Другие разрешения (камера, микрофон, геолокация) <strong>не требуются</strong>.</p></div>
+        <div class="section"><h2><i class="fas fa-plug"></i> 4. Сторонние сервисы</h2><p>В текущей версии <strong>отсутствуют</strong> любые сторонние SDK (Google Analytics, AdMob, Firebase, Crashlytics и др.). Ваши данные не передаются рекламным сетям или аналитическим платформам.</p></div>
+        <div class="section"><h2><i class="fas fa-lock"></i> 5. Безопасность</h2><p>Все данные остаются на вашем устройстве. Их защита зависит от встроенных механизмов безопасности вашего устройства. Мы не имеем удалённого доступа к вашим данным и не можем их изменить или удалить.</p></div>
+        <div class="section"><h2><i class="fas fa-child"></i> 6. Дети</h2><p>Приложение не предназначено для лиц младше 16 лет. Мы не собираем данные несовершеннолетних сознательно.</p></div>
+        <div class="section"><h2><i class="fas fa-gavel"></i> 7. Правовые основания (GDPR / CCPA)</h2><p>Поскольку персональные данные не обрабатываются, требования GDPR и CCPA автоматически соблюдены. Вы можете быть уверены, что ваша приватность не нарушается.</p></div>
+        <div class="section"><h2><i class="fas fa-edit"></i> 8. Изменения политики</h2><p>Политика может обновляться. При изменениях дата на этой странице будет меняться. Использование приложения означает согласие с текущей версией.</p></div>
+        <div class="section"><h2><i class="fas fa-envelope"></i> 9. Контакты</h2><p>Вопросы и предложения: <strong>safemediaosupport@gmail.com</strong></p></div>
+    </div>
+
+    <!-- ENGLISH VERSION (detailed) -->
+    <div id="pane-en" class="policy-pane">
+        <div class="section"><h2><i class="fas fa-circle-info"></i> 1. General</h2><p><strong>An‑Naim</strong> is an offline Arabic dictionary for language learners. It does <strong>not collect, store, or share</strong> any personal information. No tracking, analytics, or ads.</p></div>
+        <div class="section"><h2><i class="fas fa-database"></i> 2. Information collection</h2><p><span class="highlight">No personal data</span> (name, email, phone, IP address, device ID) is collected. Dictionary data, Favorites and History are stored only locally on your device. No data is sent to any external servers.</p></div>
+        <div class="section"><h2><i class="fas fa-percent"></i> 3. Permissions</h2><p>The app may request minimal permission: <strong>Storage access</strong> – to read the dictionary database and save preferences. Other permissions (camera, microphone, location) are <strong>never requested</strong>.</p></div>
+        <div class="section"><h2><i class="fas fa-plug"></i> 4. Third‑party services</h2><p>This version contains <strong>no third‑party SDKs</strong> (Google Analytics, AdMob, Firebase, Crashlytics, etc.). Your data never reaches any ad network or analytic platform.</p></div>
+        <div class="section"><h2><i class="fas fa-lock"></i> 5. Security</h2><p>All data stays on your device. Its security depends entirely on your device’s built‑in protection (password, encryption). We have no remote access to your data.</p></div>
+        <div class="section"><h2><i class="fas fa-child"></i> 6. Children’s privacy</h2><p>The app is not intended for children under 16. We do not knowingly collect personal information from minors.</p></div>
+        <div class="section"><h2><i class="fas fa-gavel"></i> 7. Legal basis (GDPR / CCPA)</h2><p>Since no personal data is processed, GDPR and CCPA requirements are automatically fulfilled. Your privacy is fully respected.</p></div>
+        <div class="section"><h2><i class="fas fa-edit"></i> 8. Changes to this policy</h2><p>We may update this policy occasionally. The “last updated” date will change. Continued use of the app implies acceptance of the current policy.</p></div>
+        <div class="section"><h2><i class="fas fa-envelope"></i> 9. Contact</h2><p>Questions? Write to us: <strong>safemediaosupport@gmail.com</strong></p></div>
+    </div>
+
+    <footer>
+        <i class="fas fa-mobile-alt"></i> An‑Naim · Offline Arabic Dictionary | <i class="far fa-heart"></i> Hech qanday maʼlumot yig‘ilmaydi
+    </footer>
+</div>
+
+<script>
+    const tabs = document.querySelectorAll('.lang-tab');
+    const panes = {
+        uz: document.getElementById('pane-uz'),
+        ru: document.getElementById('pane-ru'),
+        en: document.getElementById('pane-en')
+    };
+
+    function activateLanguage(lang) {
+        Object.values(panes).forEach(pane => pane.classList.remove('active'));
+        panes[lang].classList.add('active');
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+            if (tab.getAttribute('data-lang') === lang) tab.classList.add('active');
+        });
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const lang = tab.getAttribute('data-lang');
+            activateLanguage(lang);
+        });
+    });
+</script>
+</body>
+  </html>
